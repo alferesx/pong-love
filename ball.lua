@@ -44,7 +44,7 @@ end
 		b.ySpeed = -b.ySpeed
 	end
 
-	scoreSystem()
+	
 
 end
 
@@ -53,33 +53,7 @@ function Ball:draw()
 end
 
 
-function scoreSystem()
-	if b.x < 0 then
-		
-		b.scoreP2 = b.scoreP2 + 1
-		
-		b.x = love.graphics.getWidth() / 2
-        
-        b.y = love.graphics.getHeight() / 2
-        
-        b.xSpeed = 300
-        
-        b.ySpeed = 250
-	end
 
-	if b.x + b.width > b.screen_width then
-		
-		b.scoreP1 = b.scoreP1 + 1
-		
-		b.x = love.graphics.getWidth() / 2
-        
-        b.y = love.graphics.getHeight() / 2
-        
-        b.xSpeed = 300
-        
-        b.ySpeed = 250
-	end
-end
 
 --[[
 

@@ -17,9 +17,7 @@ function Entity:new(x,y,width,height,speed)
 	
 	self.screen_width = love.graphics.getWidth()
 	
-	self.scoreP1 = 0
-	
-	self.scoreP2 = 0
+
 	
 end
 
@@ -31,9 +29,9 @@ function Entity:draw()
 	
 	love.graphics.rectangle("fill", self.x, self.y, self.width, self.height)
 	
-	love.graphics.print(self.scoreP1,100,100)
+	love.graphics.print(scoreP1,100,100)
 
-	love.graphics.print(self.scoreP2,600,100)
+	love.graphics.print(scoreP2,600,100)
 
 end
 
