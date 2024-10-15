@@ -1,5 +1,8 @@
 Object = require "classic"
 
+ballSound = love.audio.newSource("hit.ogg","stream")
+scoreSound = love.audio.newSource("explosion.ogg", "stream")
+
 require "entity"
 
 require "player"
@@ -25,6 +28,8 @@ function love.load()
     
     scoreP2 = 0
 
+   
+
 
 end
 
@@ -39,6 +44,7 @@ function love.update(dt)
     if b.x < 0 then
         
         scoreP2 = scoreP2 + 1
+        love.audio.play(scoreSound)
         
         b.x = love.graphics.getWidth() / 2
         
@@ -52,6 +58,7 @@ function love.update(dt)
     if b.x + b.width > b.screen_width then
         
         scoreP1 = scoreP1 + 1
+        love.audio.play(scoreSound)
         
         b.x = love.graphics.getWidth() / 2
         
